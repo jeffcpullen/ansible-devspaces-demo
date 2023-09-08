@@ -9,6 +9,9 @@ components:
       memoryLimit: 6Gi
       cpuRequest: 250m
       cpuLimit: 2000m
+      env:
+        - name: KUBEDOCK_ENABLED
+          value: true
       args: ['tail', '-f', '/dev/null']
 commands:
   - id: oc-install
